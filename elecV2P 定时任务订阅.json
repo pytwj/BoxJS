@@ -2,7 +2,7 @@
   "name": "elecV2P 定时任务订阅",
   "author": "留个名字",
   "desc": "xx 导出的任务订阅。该订阅适用于 elecV2P，与其他软件并不兼容。相关说明参考：https://github.com/elecV2/elecV2P-dei/tree/master/docs/06-task.md",
-  "date": "2021-04-13 17:16:59",
+  "date": "2021-04-23 14:09:03",
   "list": [
     {
       "name": "京东多合一",
@@ -419,15 +419,6 @@
       }
     },
     {
-      "name": "手机狂欢城(至4-20)",
-      "type": "cron",
-      "time": "0 0-18/6 * * *",
-      "job": {
-        "type": "runjs",
-        "target": "jd_carnivalcity.js"
-      }
-    },
-    {
       "name": "口袋书店",
       "type": "cron",
       "time": "1 8,12,18 * * *",
@@ -461,6 +452,24 @@
       "job": {
         "type": "runjs",
         "target": "jd_nzmh.js"
+      }
+    },
+    {
+      "name": "东东健康社区",
+      "type": "cron",
+      "time": "10 0-23/4 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "z_health_community.js"
+      }
+    },
+    {
+      "name": "健康社区-收能量",
+      "type": "cron",
+      "time": "25 * * * *",
+      "job": {
+        "type": "runjs",
+        "target": "z_health_energy.js"
       }
     }
   ]
