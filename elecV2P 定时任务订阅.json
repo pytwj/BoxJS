@@ -2,7 +2,7 @@
   "name": "elecV2P 定时任务订阅",
   "author": "留个名字",
   "desc": "xx 导出的任务订阅。该订阅适用于 elecV2P，与其他软件并不兼容。相关说明参考：https://github.com/elecV2/elecV2P-dei/tree/master/docs/06-task.md",
-  "date": "2021-04-23 14:09:03",
+  "date": "2021-04-27 16:33:38",
   "list": [
     {
       "name": "京东多合一",
@@ -470,6 +470,51 @@
       "job": {
         "type": "runjs",
         "target": "z_health_energy.js"
+      }
+    },
+    {
+      "name": "整点京豆雨",
+      "type": "cron",
+      "time": "1 0-23/1 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "jd_super_redrain.js"
+      }
+    },
+    {
+      "name": "京小兑",
+      "type": "cron",
+      "time": "30 8,16,20 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "jd_jxd.js"
+      }
+    },
+    {
+      "name": "interCenter渠道店铺签到",
+      "type": "cron",
+      "time": "0 0 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "monk_inter_shop_sign.js"
+      }
+    },
+    {
+      "name": "加购有礼",
+      "type": "cron",
+      "time": "15 12 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "monk_shop_add_to_car.js"
+      }
+    },
+    {
+      "name": "获取互助码",
+      "type": "cron",
+      "time": "20 13 * * 6",
+      "job": {
+        "type": "runjs",
+        "target": "jd_get_share_code.js"
       }
     }
   ]
