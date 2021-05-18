@@ -2,7 +2,7 @@
   "name": "elecV2P 定时任务订阅",
   "author": "留个名字",
   "desc": "xx 导出的任务订阅。该订阅适用于 elecV2P，与其他软件并不兼容。相关说明参考：https://github.com/elecV2/elecV2P-dei/tree/master/docs/06-task.md",
-  "date": "2021-05-13 13:09:40",
+  "date": "2021-05-18 17:38:16",
   "list": [
     {
       "name": "京东多合一",
@@ -551,6 +551,24 @@
       "job": {
         "type": "runjs",
         "target": "jd_half_redrain.js"
+      }
+    },
+    {
+      "name": "京东家庭号",
+      "type": "cron",
+      "time": "1 12,23 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "jd_family.js"
+      }
+    },
+    {
+      "name": "领京豆额外奖励",
+      "type": "cron",
+      "time": "10 7 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "jd_bean_home.js"
       }
     }
   ]
