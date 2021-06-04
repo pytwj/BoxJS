@@ -2,7 +2,7 @@
   "name": "elecV2P 定时任务订阅",
   "author": "留个名字",
   "desc": "xx 导出的任务订阅。该订阅适用于 elecV2P，与其他软件并不兼容。相关说明参考：https://github.com/elecV2/elecV2P-dei/tree/master/docs/06-task.md",
-  "date": "2021-05-28 21:00:43",
+  "date": "2021-06-04 15:55:08",
   "list": [
     {
       "name": "京东多合一",
@@ -581,15 +581,6 @@
       }
     },
     {
-      "name": "动物联萌",
-      "type": "cron",
-      "time": "5 * * * *",
-      "job": {
-        "type": "runjs",
-        "target": "jd_zoo.js"
-      }
-    },
-    {
       "name": "动物联萌加购",
       "type": "cron",
       "time": "15 * * * *",
@@ -641,6 +632,87 @@
       "job": {
         "type": "runjs",
         "target": "jd_xtg_help.js"
+      }
+    },
+    {
+      "name": "金榜创造营",
+      "type": "cron",
+      "time": "0 8 21-31 5-12 *",
+      "job": {
+        "type": "runjs",
+        "target": "jd_jbczy.js"
+      }
+    },
+    {
+      "name": "京享值PK",
+      "type": "cron",
+      "time": "15 0,6,13,19,21 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "ddo_pk.js"
+      }
+    },
+    {
+      "name": "京东新潮品牌狂欢wenmoux",
+      "type": "cron",
+      "time": "1 0-23/1 * 6 *",
+      "job": {
+        "type": "runjs",
+        "target": "jd_618redpacket.js"
+      }
+    },
+    {
+      "name": "京东明星小店",
+      "type": "cron",
+      "time": "0 1,21 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "jd_star_shop.js"
+      }
+    },
+    {
+      "name": "京东618主会场红包雨",
+      "type": "cron",
+      "time": "1 20 1-18 6 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/oujisome/jdshell/main/long_hby_lottery.js"
+      }
+    },
+    {
+      "name": "京东宝洁消消乐",
+      "type": "cron",
+      "time": "18 9 1-18 6 *",
+      "job": {
+        "type": "runjs",
+        "target": "https://cdn.jsdelivr.net/gh/zooPanda/zoo@dev/zooBaojiexiaoxiaole.js"
+      }
+    },
+    {
+      "name": "京东浓情618与粽不同",
+      "type": "cron",
+      "time": "0 9 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/zooPanda/zoo/dev/zooLongzhou.js"
+      }
+    },
+    {
+      "name": "京东大牌闪购红包雨",
+      "type": "cron",
+      "time": "1 0 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/panghu999/panghu/master/jd_dphby.js"
+      }
+    },
+    {
+      "name": "京东特物国创IP",
+      "type": "cron",
+      "time": "1 0 * * *",
+      "job": {
+        "type": "runjs",
+        "target": "https://ghproxy.com/https://raw.githubusercontent.com/panghu999/panghu/master/jd_gcip.js"
       }
     }
   ]
